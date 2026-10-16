@@ -1,0 +1,249 @@
+.bg-primary,
+.btn-primary,
+.btn-outline-primary:hover, 
+.btn-outline-primary:focus, 
+.btn-outline-primary:active, 
+.btn-outline-primary.active, 
+.btn-outline-primary.focus, 
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-soft-primary:hover, 
+.btn-soft-primary:focus, 
+.btn-soft-primary:active, 
+.btn-soft-primary.active, 
+.btn-soft-primary.focus,
+.badge-primary,
+.pagination .page-item.active .page-link,
+.custom-control-input:checked ~ .custom-control-label:before,
+.social-icon li a:hover,
+::selection,
+#topnav .navbar-toggle.open span:hover,
+.services:hover.serv-primary,
+.watch-video a .play-icon-circle,
+.pricing.hosting-rate:hover .plan-name,
+.tns-nav button.tns-nav-active,
+.sidebar .widget .tagcloud > a:hover,
+.ribbon.ribbon-primary span,
+.nav-pills .nav-link.active,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .action-column .dropdown .dropdown-menu li:hover,
+.bootstrap-datetimepicker-widget td[data-action="selectDay"].day:hover,
+.bootstrap-datetimepicker-widget td[data-action="selectMonth"].day:hover,
+.bootstrap-datetimepicker-widget td[data-action="selectYear"].day:hover,
+.bootstrap-datetimepicker-widget td[data-action="selectDecade"].day:hover,
+.bootstrap-datetimepicker-widget .datepicker thead tr th[data-action="pickerSwitch"]:hover,
+.bootstrap-datetimepicker-widget .datepicker thead tr th[data-action="previous"]:hover,
+.bootstrap-datetimepicker-widget .datepicker thead tr th[data-action="next"]:hover,
+.bootstrap-datetimepicker-widget span.uil-focus-target:hover,
+.bootstrap-datetimepicker-widget span.uil-trash-alt:hover,
+.bootstrap-datetimepicker-widget span.uil-x:hover,
+.bootstrap-datetimepicker-widget span[data-action="selectMonth"].month:hover,
+.bootstrap-datetimepicker-widget span[data-action="selectYear"].year:hover,
+.bootstrap-datetimepicker-widget span[data-action="selectDecade"].decade:hover,
+.bootstrap-datetimepicker-widget span[data-action="selectDecade"].decade.active,
+.kv-file-rotate:hover,
+.kv-file-download:hover,
+.kv-file-remove:hover,
+#pills-tab li.active{
+    background-color: #65227D !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.active {
+    border-color: #65227D !important;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.text-primary,
+.btn-soft-primary,
+.btn-outline-primary,
+.alert-outline-primary,
+.badge-outline-primary,
+.accordion .accordion-item .accordion-button:not(.collapsed),
+.accordion .accordion-item .accordion-button:before,
+#topnav .has-submenu.active .submenu li.active > a,
+#topnav .navigation-menu > li > a:hover, #topnav .navigation-menu > li > a:active,
+#topnav .navigation-menu > li:hover > a,
+#topnav .navigation-menu > li.active > a,
+#topnav.scroll .navigation-menu > li:hover > a, #topnav.scroll .navigation-menu > li.active > a,
+#topnav.nav-sticky .navigation-menu.nav-light > li.active > a,
+#topnav.nav-sticky .navigation-menu.nav-light > li:hover > a, #topnav.nav-sticky .navigation-menu.nav-light > li.active > a,
+#topnav .navigation-menu > li .submenu li a:hover,
+#topnav .navigation-menu > li > a:hover,
+#topnav .navigation-menu > li .submenu li a:hover,
+#topnav .navigation-menu > li.has-submenu.open > a,
+#topnav .has-submenu.active a,
+.services .content .title:hover,
+.pricing.hosting-rate:hover.best-plan .lable .best,
+.blog-post .content .title:hover,
+.blog-post .content .post-meta .like:hover,
+.blog-post .content .post-meta .comment:hover,
+.blog-post .content .post-meta .read-more:hover,
+.sidebar .widget .catagory li a:hover,
+.sidebar .widget .post-recent .post-recent-content a:hover,
+.media-list .comment-desk a:hover,
+.breadcrumb .breadcrumb-item.active,
+.breadcrumb .breadcrumb-item a,
+.breadcrumb .breadcrumb-item a:hover,
+.breadcrumb li:not(.active) a,
+.dataTables_wrapper .dataTables_paginate .paginate_button:not(.current):not(:hover),
+.dataTables_wrapper .dataTables_paginate .paginate_button:not(.current):not(:hover) a,
+.dataTables_wrapper .action-column .dropdown .dropdown-menu li a{
+    color: #65227d !important;
+}
+
+.btn-primary,
+.btn-outline-primary,
+.btn-outline-primary:hover, 
+.btn-outline-primary:focus, 
+.btn-outline-primary:active, 
+.btn-outline-primary.active, 
+.btn-outline-primary.focus, 
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-soft-primary:hover, 
+.btn-soft-primary:focus, 
+.btn-soft-primary:active, 
+.btn-soft-primary.active, 
+.btn-soft-primary.focus,
+.alert-primary,
+.alert-outline-primary,
+.badge-outline-primary,
+.pagination .page-item.active .page-link,
+.form-group .form-control:focus, .form-group .form-control.active,
+.custom-control-input:checked ~ .custom-control-label:before,
+.custom-control-input:focus ~ .custom-control-label::before,
+.form-control:focus,
+.select2-container--krajee-bs3.select2-container--focus .select2-selection--single,
+.select2-container--krajee-bs3.select2-container--open .select2-selection--single,
+.social-icon li a:hover,
+#topnav .has-submenu.active .menu-arrow,
+#topnav.scroll .navigation-menu > li:hover > .menu-arrow, #topnav.scroll .navigation-menu > li.active > .menu-arrow,
+#topnav.nav-sticky .navigation-menu.nav-light > li:hover > .menu-arrow, #topnav.nav-sticky .navigation-menu.nav-light > li.active > .menu-arrow,
+#topnav .navigation-menu > li:hover > .menu-arrow {
+    border-color: #65227D !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .date_buttaTables_paginate .paginaton.current {
+    border-color: #65227D !important;
+}
+
+a.text-primary:hover, 
+a.text-primary:focus, 
+a.text-primary:active, 
+a.text-primary.active, 
+a.text-primary.focus {
+    color: #451755 !important;
+}
+
+.ribbon.ribbon-primary span:before {
+    border-left-color: #451755;
+    border-top-color: #451755;
+}
+
+.ribbon.ribbon-primary span:after {
+    border-right-color: #451755;
+    border-top-color: #451755;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.btn-primary.focus {
+    background-color: #451755 !important;
+    border-color: #451755 !important;
+}
+
+.btn-primary,
+.btn-soft-primary:hover, 
+.btn-soft-primary:focus, 
+.btn-soft-primary:active, 
+.btn-soft-primary.active, 
+.btn-soft-primary.focus,
+.btn-outline-primary:hover, 
+.btn-outline-primary:focus, 
+.btn-outline-primary:active, 
+.btn-outline-primary.active, 
+.btn-outline-primary.focus, 
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+    box-shadow: 0 3px 7px rgba(101, 34, 125, 0.5) !important;
+}
+
+.btn-soft-primary {
+    background-color: rgba(101, 34, 125, 0.15) !important;
+    border-color: rgba(101, 34, 125, 0.1) !important;
+    box-shadow: 0 3px 7px rgba(101, 34, 125, 0.2);
+}
+
+.alert-primary,
+.pagination .page-item .page-link:hover {
+    background-color: rgba(101, 34, 125, 0.9);
+}
+
+.alert-primary .alert-link {
+    color: #040105;
+}
+
+.pagination .page-item .page-link:hover {
+    border-color: rgba(101, 34, 125, 0.9);
+}
+
+.services .icon {
+    border: 3px solid rgba(101, 34, 125, 0.2);
+    background-color: rgba(101, 34, 125, 0.065);
+}
+
+.play-icon i {
+    -webkit-text-stroke: 2px #65227D;
+    -webkit-text-fill-color: transparent;
+}
+
+.play-icon i:hover {
+    -webkit-text-stroke: 2px #65227D;
+    -webkit-text-fill-color: #65227D;
+}
+
+.tns-nav button {
+    background: rgba(101, 34, 125, 0.5) !important;
+}
+
+.gradient-overlay {
+    background: linear-gradient(to right, #65227D, #5368f1) !important;
+}
+.ribbon.ribbon-primary span:before {
+    border-left-color: #65227D;
+    border-top-color: #65227D;
+}
+
+.ribbon.ribbon-primary span:after {
+    border-right-color: #65227D;
+    border-top-color: #65227D;
+}
+
+/* Select2 dropdown options - purple theme */
+/* Select2 dropdown options - purple theme */
+.select2-container > .select2-dropdown {
+    border-color: #65227D !important;
+}
+
+.select2-dropdown .select2-results__option {
+    background-color: transparent !important;
+}
+
+.select2-dropdown .select2-results__option--highlighted {
+    background-color: #65227D !important;
+}
+
+/* Invoice action buttons hover */
+.invoice-action-buttons .btn:hover,
+.invoice-action-buttons .btn:focus,
+.invoice-action-buttons .btn:active,
+.invoice-action-buttons .btn.active,
+.invoice-action-buttons .btn.focus {
+    background-color: #65227D !important;
+    border-color: #65227D !important;
+    color: #ffffff !important;
+    box-shadow: 0 3px 7px rgba(101, 34, 125, 0.5) !important;
+    transform: translateY(-2px);
+}

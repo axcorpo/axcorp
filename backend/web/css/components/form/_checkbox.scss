@@ -1,0 +1,24 @@
+// COMPONENTS / FORM / CHECKBOX
+// ------------------------------------
+
+.form-group {
+	.mt-checkbox-inline {
+		padding: 0;
+	}
+	.mt-checkbox {
+		margin: 3px 15px 3px 0;
+		input + span {
+			border-color: #ccc;
+		}
+		&.mt-checkbox-width-md {
+			width: 100%;
+			max-width: 250px;
+		}
+	}
+}
+
+.mark-no-spacing {
+	.mt-checkbox {
+		margin: 0;
+	}
+}

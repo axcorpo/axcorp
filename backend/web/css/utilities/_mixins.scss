@@ -1,0 +1,50 @@
+// UTILITIES / MIXINS
+// ------------------------------------
+
+@mixin boxShadow($depth: 2) {
+	$elevation: '';
+	@if ($depth == 1) {
+		$elevation: 0 2px 4px -1px rgba(0, 0, 0, .2),
+								0 4px 5px 0 rgba(0, 0, 0, .14),
+								0 1px 10px 0 rgba(0, 0, 0, .12);
+	}
+	@if ($depth == 2) {
+		$elevation: 0 5px 5px -3px rgba(0, 0, 0, .2),
+								0 8px 10px 1px rgba(0, 0, 0, .14),
+								0 3px 14px 2px rgba(0, 0, 0, .12);
+	}
+	@if ($depth == 3) {
+		$elevation: 0 7px 8px -4px rgba(0, 0, 0, .2),
+								0 12px 17px 2px rgba(0, 0, 0, .14),
+								0 5px 22px 4px rgba(0, 0, 0, .12);
+	}
+	@if ($depth == 4) {
+		$elevation: 0 8px 10px -5px rgba(0, 0, 0, .2),
+								0 16px 24px 2px rgba(0, 0, 0, .14),
+								0 6px 30px 5px rgba(0, 0, 0, .12);
+	}
+	@if ($depth == 5) {
+		$elevation: 0 10px 13px -6px rgba(0, 0, 0, .2),
+								0 20px 31px 3px rgba(0, 0, 0, .14),
+								0 8px 38px 7px rgba(0, 0, 0, .12);
+	}
+	box-shadow: $elevation;
+}
+
+@mixin textShadow($depth: 1px, $color: $color-black) {
+	@if (unitless($depth)) {
+		$depth: $depth * 1px;
+	}
+	text-shadow: $depth $depth $depth $color;
+}
+
+@mixin hiddenAccessible() {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}

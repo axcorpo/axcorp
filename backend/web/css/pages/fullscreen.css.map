@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACC;;;;6BAIa;EACZ,MAAM,EAAE,IAAI;AAEb,gCAAgB;EACf,MAAM,EAAE,iBAAiB;AAG1B,8BAAc;EACb,OAAO,EAAE,eAAe",
+"sources": ["fullscreen.scss"],
+"names": [],
+"file": "fullscreen.css"
+}

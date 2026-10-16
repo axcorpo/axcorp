@@ -1,0 +1,28 @@
+// UTILITIES / FUNCTIONS
+// ------------------------------------
+
+// Convert px to rem
+@function rem($pixels, $context: $base-font-size) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return #{$pixels / $context}rem;
+}
+
+// Convert px to em
+@function em($pixels, $context: $base-font-size) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return #{$pixels / $context}em;
+}

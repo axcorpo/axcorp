@@ -1,0 +1,14 @@
+// WIDGETS / COLORPICKER
+// ------------------------------------
+
+.spectrum-group {
+	.sp-replacer {
+		white-space: nowrap;
+		& > .sp-preview,
+		& > .sp-dd {
+			float: none;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}

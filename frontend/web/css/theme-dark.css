@@ -1,0 +1,541 @@
+/**
+ * "AI Agency Dark" — the template's dark variant (index-dark.html), applied to the whole site.
+ *
+ * The layouts put `body-style-dark` on <body> (black page, white paragraphs, as in the
+ * template). The template's colour tokens are switched to their dark values here, so every
+ * component that reads them (titles, paragraphs, borders, light surfaces) follows; the few
+ * components with a hard-coded light background get a dark surface below. Loaded last.
+ */
+
+.body-style-dark {
+	--color-title: #FFFFFF;
+	--color-paragraph: rgba(255, 255, 255, 0.65);
+	--color-border-2: rgba(255, 255, 255, 0.1);
+	--color-border-4: rgba(255, 255, 255, 0.1);
+	--color-border-7: rgba(255, 255, 255, 0.07);
+	--color-border-8: rgba(255, 255, 255, 0.1);
+	--ai-agency-gray: #131313;
+	--color-bg-1: rgba(92, 87, 231, 0.18);
+
+	/* Our own tokens (theme.css) */
+	--theme-surface: #0D0D0F;
+	--dark-card: #131313;
+	--dark-card-2: #1A1A1D;
+	--dark-input: #1E1E22;
+
+	--bs-body-bg: #000000;
+	--bs-body-color: rgba(255, 255, 255, 0.75);
+	--bs-emphasis-color: #FFFFFF;
+	--bs-secondary-color: rgba(255, 255, 255, 0.6);
+	--bs-tertiary-bg: #131313;
+	--bs-secondary-bg: #1A1A1D;
+	--bs-border-color: rgba(255, 255, 255, 0.12);
+	--bs-border-color-translucent: rgba(255, 255, 255, 0.12);
+	--bs-heading-color: #FFFFFF;
+	--bs-link-color: #A291FE;
+	--bs-link-color-rgb: 162, 145, 254;
+	--bs-link-hover-color: #FFFFFF;
+
+	background: var(--black);
+	color: var(--bs-body-color);
+	color-scheme: dark;
+}
+
+.body-style-dark h1,
+.body-style-dark h2,
+.body-style-dark h3,
+.body-style-dark h4,
+.body-style-dark h5,
+.body-style-dark h6,
+.body-style-dark .h1,
+.body-style-dark .h2,
+.body-style-dark .h3,
+.body-style-dark .h4,
+.body-style-dark .h5,
+.body-style-dark .h6,
+.body-style-dark strong,
+.body-style-dark label,
+.body-style-dark .form-label,
+.body-style-dark .control-label,
+.body-style-dark dt,
+.body-style-dark th {
+	color: var(--white);
+}
+
+/* The template whitens every paragraph; muted text keeps its lower contrast. */
+.body-style-dark p.text-muted,
+.body-style-dark .text-muted {
+	color: var(--color-paragraph) !important;
+}
+
+.body-style-dark .text-dark {
+	color: var(--white) !important;
+}
+
+.body-style-dark .bg-white,
+.body-style-dark .bg-light {
+	background-color: var(--dark-card) !important;
+}
+
+.body-style-dark hr {
+	border-color: var(--color-border-5);
+	opacity: 1;
+}
+
+/* ---------------------------------------------------------------- Surfaces */
+
+.body-style-dark .card,
+.body-style-dark .modal-content,
+.body-style-dark .list-group-item,
+.body-style-dark .account-sidebar,
+.body-style-dark .site-form-card,
+.body-style-dark .site-pricing-table,
+.body-style-dark .check-card,
+.body-style-dark .home-feature,
+.body-style-dark .home-mockup__stat,
+.body-style-dark .site-testimonials .tes-item.no-img,
+.body-style-dark .home-partners .brand-item.home-brand:hover {
+	background: var(--dark-card);
+	border-color: var(--color-border-5);
+	color: var(--bs-body-color);
+}
+
+.body-style-dark .shadow,
+.body-style-dark .account-sidebar {
+	box-shadow: 0 12px 46px rgba(0, 0, 0, 0.5) !important;
+}
+
+.body-style-dark .card-header,
+.body-style-dark .card-footer,
+.body-style-dark .modal-header,
+.body-style-dark .modal-footer {
+	background: transparent;
+	border-color: var(--color-border-5);
+}
+
+.body-style-dark .btn-close {
+	filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.body-style-dark .map-consent-placeholder {
+	background: var(--dark-card);
+	border-color: var(--color-border-5);
+}
+
+/* ---------------------------------------------------------------- Template components (their style-dark variants) */
+
+.body-style-dark .tes-item {
+	background: var(--dark-card);
+	border-color: var(--color-border-5);
+}
+
+.body-style-dark .wg-according .according-item {
+	border-color: var(--color-border-5);
+}
+
+.body-style-dark .wg-according .according-item .icon::before,
+.body-style-dark .wg-according .according-item .icon::after {
+	background: var(--white);
+}
+
+.body-style-dark .wg-according .according-item .text {
+	color: var(--color-text-2);
+}
+
+.body-style-dark .nav-btn {
+	border-color: var(--color-border-5);
+	color: var(--white);
+}
+
+.body-style-dark .brand-item {
+	border-color: var(--color-border-5);
+}
+
+.body-style-dark .pricing-item.style-bg-1,
+.body-style-dark .pricing-item.style-bg-white {
+	background: var(--dark-card);
+	border-color: var(--color-border-5);
+}
+
+.body-style-dark .services-item-2,
+.body-style-dark .mission-card,
+.body-style-dark .contact-card,
+.body-style-dark .sidebar-content,
+.body-style-dark .wg-siderbar-category,
+.body-style-dark .post-grid .post-content,
+.body-style-dark .project-item .meta-project .meta-item {
+	background-color: var(--dark-card);
+	border-color: var(--color-border-5);
+}
+
+.body-style-dark .contact-card .link {
+	background: var(--dark-card-2);
+	color: var(--white);
+}
+
+.body-style-dark .sub-menu {
+	background-color: var(--dark-card);
+	box-shadow: 0 12px 46px rgba(0, 0, 0, 0.6);
+}
+
+.body-style-dark .sub-menu_link {
+	color: var(--color-text-2);
+}
+
+.body-style-dark .sub-menu_link:hover,
+.body-style-dark .sub-menu_link.active {
+	color: var(--white);
+}
+
+.body-style-dark .tf-btn.style-color-white,
+.body-style-dark .tf-btn.style-color-white-2 {
+	background-color: var(--dark-card-2);
+}
+
+/* ---------------------------------------------------------------- Forms */
+
+.body-style-dark .form-control,
+.body-style-dark .form-select,
+.body-style-dark input[type="text"],
+.body-style-dark input[type="email"],
+.body-style-dark input[type="password"],
+.body-style-dark input[type="tel"],
+.body-style-dark input[type="number"],
+.body-style-dark input[type="search"],
+.body-style-dark textarea,
+.body-style-dark select {
+	background-color: var(--dark-input);
+	border-color: var(--color-border-5);
+	color: var(--white);
+}
+
+.body-style-dark .form-control::placeholder,
+.body-style-dark input::placeholder,
+.body-style-dark textarea::placeholder {
+	color: var(--color-text-1);
+}
+
+.body-style-dark .form-control:focus,
+.body-style-dark .form-select:focus {
+	background-color: var(--dark-input);
+	color: var(--white);
+	border-color: var(--ai-startup-blue);
+}
+
+.body-style-dark .form-control:disabled,
+.body-style-dark .form-control[readonly] {
+	background-color: #141416;
+	color: var(--color-text-1);
+}
+
+.body-style-dark .form-select {
+	--bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.body-style-dark .form-check-input {
+	background-color: var(--dark-input);
+	border-color: var(--color-text-1);
+}
+
+.body-style-dark .form-check-input:checked {
+	background-color: var(--ai-startup-blue);
+	border-color: var(--ai-startup-blue);
+}
+
+.body-style-dark .input-group-text {
+	background-color: var(--dark-card-2);
+	border-color: var(--color-border-5);
+	color: var(--color-text-2);
+}
+
+.body-style-dark .help-block,
+.body-style-dark .hint-block,
+.body-style-dark .form-text {
+	color: var(--color-text-1);
+}
+
+.body-style-dark .has-error .help-block,
+.body-style-dark .invalid-feedback {
+	color: #ff8a8a;
+}
+
+/* Select2 (kartik) */
+.body-style-dark .select2-container--krajee-bs3 .select2-selection,
+.body-style-dark .select2-container--krajee .select2-selection,
+.body-style-dark .select2-container--default .select2-selection {
+	background-color: var(--dark-input);
+	border-color: var(--color-border-5);
+	color: var(--white);
+}
+
+.body-style-dark .select2-container .select2-selection__rendered {
+	color: var(--white) !important;
+}
+
+.body-style-dark .select2-dropdown {
+	background-color: var(--dark-card-2);
+	border-color: var(--color-border-5);
+	color: var(--white);
+}
+
+.body-style-dark .select2-results__option[aria-selected="true"],
+.body-style-dark .select2-results__option--selected {
+	background-color: rgba(255, 255, 255, 0.08);
+}
+
+.body-style-dark .select2-search__field {
+	background-color: var(--dark-input) !important;
+	color: var(--white) !important;
+}
+
+/* intl-tel-input */
+.body-style-dark .iti__country-list {
+	background-color: var(--dark-card-2);
+	border-color: var(--color-border-5);
+	color: var(--white);
+}
+
+.body-style-dark .iti__dial-code {
+	color: var(--color-text-1);
+}
+
+/* ---------------------------------------------------------------- Bootstrap components */
+
+.body-style-dark .btn-outline-primary {
+	border-color: #A291FE;
+	color: #A291FE;
+}
+
+.body-style-dark .btn-light {
+	background: var(--dark-card-2);
+	border-color: var(--color-border-5);
+	color: var(--white);
+}
+
+.body-style-dark .btn-primary:hover,
+.body-style-dark .btn-primary:active,
+.body-style-dark .btn-primary.active {
+	background: var(--white) !important;
+	border-color: var(--white) !important;
+	color: var(--black) !important;
+}
+
+.body-style-dark .btn-soft-primary {
+	background: rgba(92, 87, 231, 0.18);
+	color: #C8BEFF;
+}
+
+.body-style-dark .dropdown-menu,
+.body-style-dark .header-dropdown .dropdown-menu {
+	--bs-dropdown-bg: var(--dark-card);
+	--bs-dropdown-color: var(--white);
+	--bs-dropdown-link-color: var(--color-text-2);
+	--bs-dropdown-link-hover-color: var(--white);
+	--bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.06);
+	--bs-dropdown-divider-bg: var(--color-border-5);
+	background-color: var(--dark-card);
+	border: 1px solid var(--color-border-5);
+	box-shadow: 0 12px 46px rgba(0, 0, 0, 0.6);
+}
+
+.body-style-dark .header-dropdown .dropdown-item {
+	color: var(--color-text-2);
+}
+
+.body-style-dark .header-dropdown .dropdown-item:hover,
+.body-style-dark .header-dropdown .dropdown-item:focus,
+.body-style-dark .header-dropdown .dropdown-item.active,
+.body-style-dark .header-dropdown .dropdown-item-title {
+	background: rgba(255, 255, 255, 0.06);
+	color: var(--white);
+}
+
+.body-style-dark .header-dropdown .dropdown-item-title {
+	background: transparent;
+}
+
+.body-style-dark .header-dropdown .dropdown-divider {
+	border-color: var(--color-border-5);
+}
+
+.body-style-dark .table {
+	--bs-table-bg: transparent;
+	--bs-table-color: var(--color-text-2);
+	--bs-table-border-color: var(--color-border-5);
+	--bs-table-striped-bg: rgba(255, 255, 255, 0.03);
+	--bs-table-striped-color: var(--color-text-2);
+	--bs-table-hover-bg: rgba(255, 255, 255, 0.05);
+	--bs-table-hover-color: var(--white);
+	color: var(--color-text-2);
+}
+
+.body-style-dark .table > thead th {
+	color: var(--white);
+}
+
+.body-style-dark .pagination .page-link,
+.body-style-dark .wg-pagination .pagination .page-link {
+	background: var(--dark-card);
+	border-color: var(--color-border-5);
+	color: var(--color-text-2);
+}
+
+.body-style-dark .pagination .page-item.disabled .page-link,
+.body-style-dark .pagination .page-item.disabled span {
+	background: transparent;
+	color: var(--color-text-1);
+}
+
+.body-style-dark .pagination .active > .page-link,
+.body-style-dark .pagination .page-item.active .page-link {
+	background: var(--ai-startup-blue);
+	border-color: var(--ai-startup-blue);
+	color: var(--white);
+}
+
+.body-style-dark .nav-tabs {
+	border-color: var(--color-border-5);
+}
+
+.body-style-dark .nav-tabs .nav-link {
+	color: var(--color-text-2);
+}
+
+.body-style-dark .nav-tabs .nav-link.active {
+	background: var(--dark-card);
+	border-color: var(--color-border-5) var(--color-border-5) var(--dark-card);
+	color: var(--white);
+}
+
+.body-style-dark .badge.bg-light {
+	color: var(--white) !important;
+}
+
+.body-style-dark .progress {
+	background-color: var(--dark-card-2);
+}
+
+/* DataTables */
+.body-style-dark .dataTable thead th,
+.body-style-dark .dataTable tbody td {
+	background: transparent !important;
+	border-color: var(--color-border-5) !important;
+	color: var(--color-text-2);
+}
+
+.body-style-dark .dataTable thead th {
+	color: var(--white);
+}
+
+.body-style-dark .dataTable tbody tr:nth-child(even) {
+	background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.body-style-dark .dataTable tbody tr:hover {
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.body-style-dark .dataTables_wrapper .dataTables_filter input,
+.body-style-dark .dataTables_wrapper .dataTables_length select {
+	background: var(--dark-input);
+	border-color: var(--color-border-5);
+	color: var(--white);
+}
+
+.body-style-dark .dataTables_wrapper .dataTables_info,
+.body-style-dark .dataTables_wrapper .dataTables_length,
+.body-style-dark .dataTables_wrapper .dataTables_filter {
+	color: var(--color-text-1);
+}
+
+.body-style-dark .dataTables_wrapper .dataTables_paginate .paginate_button a {
+	background: var(--dark-card) !important;
+	border-color: var(--color-border-5) !important;
+	color: var(--color-text-2) !important;
+}
+
+.body-style-dark .dataTables_wrapper .dataTables_paginate .paginate_button.current a {
+	background: var(--ai-startup-blue) !important;
+	color: var(--white) !important;
+}
+
+/* Alerts keep their colour, on a dark tint */
+.body-style-dark .alert-success {
+	background: rgba(25, 135, 84, 0.15);
+	border-color: rgba(25, 135, 84, 0.4);
+	color: #8fe0b6;
+}
+
+.body-style-dark .alert-info {
+	background: rgba(13, 202, 240, 0.12);
+	border-color: rgba(13, 202, 240, 0.35);
+	color: #8adff2;
+}
+
+.body-style-dark .alert-warning {
+	background: rgba(255, 193, 7, 0.12);
+	border-color: rgba(255, 193, 7, 0.35);
+	color: #ffd866;
+}
+
+.body-style-dark .alert-danger {
+	background: rgba(220, 53, 69, 0.14);
+	border-color: rgba(220, 53, 69, 0.4);
+	color: #ff9aa4;
+}
+
+/* Kartik dialog (alerts and confirmations) */
+.body-style-dark .bootstrap-dialog .modal-content {
+	background: var(--dark-card);
+	color: var(--color-text-2);
+}
+
+.body-style-dark .bootstrap-dialog .bootstrap-dialog-message,
+.body-style-dark .bootstrap-dialog .modal-body {
+	color: var(--color-text-2);
+}
+
+/* ---------------------------------------------------------------- Rich content */
+
+.body-style-dark .rich-content,
+.body-style-dark .rich-content li,
+.body-style-dark .rich-content td {
+	color: var(--color-text-2);
+}
+
+.body-style-dark .rich-content a {
+	color: #A291FE;
+}
+
+.body-style-dark .rich-content blockquote {
+	border-left: 3px solid var(--ai-startup-blue);
+	padding-left: 18px;
+	color: var(--white);
+}
+
+/* ---------------------------------------------------------------- Account area */
+
+.body-style-dark #pills-tab li a {
+	color: var(--color-text-2);
+}
+
+.body-style-dark #pills-tab li a:hover {
+	background: rgba(255, 255, 255, 0.06);
+	color: var(--white);
+}
+
+.body-style-dark .account-user {
+	border-color: var(--color-border-5);
+}
+
+/* About page: the company logo sits on a white card, also in the dark theme. */
+.body-style-dark .site-about-image {
+	background: #FFFFFF;
+	border-color: #FFFFFF;
+}
+
+/* Blog list: the post text sits on the page, under its picture (the grid card variant keeps
+   its dark surface). */
+.body-style-dark .section-blog-standard .post-grid .post-content {
+	background-color: transparent;
+}

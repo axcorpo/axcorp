@@ -1,0 +1,16 @@
+.page-fullscreen {
+	&,
+	.page-wrapper,
+	.page-content-wrapper,
+	.page-content,
+	.full-height {
+		height: 100%;
+	}
+	.page-container {
+		height: calc(100% - 83px);
+	}
+
+	.menu-toggler {
+		display: none !important;
+	}
+}

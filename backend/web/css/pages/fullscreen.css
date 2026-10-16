@@ -1,0 +1,12 @@
+.page-fullscreen,
+.page-fullscreen .page-wrapper,
+.page-fullscreen .page-content-wrapper,
+.page-fullscreen .page-content,
+.page-fullscreen .full-height {
+  height: 100%; }
+.page-fullscreen .page-container {
+  height: calc(100% - 83px); }
+.page-fullscreen .menu-toggler {
+  display: none !important; }
+
+/*# sourceMappingURL=fullscreen.css.map */

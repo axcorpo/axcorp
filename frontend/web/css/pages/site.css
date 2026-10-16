@@ -1,0 +1,330 @@
+/* Agentra theme: site pages */
+
+/* ---------------------------------------------------------------- Shared */
+
+.site-form-card {
+	padding: 40px;
+	border-radius: 20px;
+	background: var(--white);
+	border: 1px solid var(--color-border-1);
+	box-shadow: 0 12px 46px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 767px) {
+	.site-form-card {
+		padding: 30px 16px;
+	}
+}
+
+.site-form-card__title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--color-title);
+}
+
+.site-form-card__title i,
+.site-subscribe .heading-section .sub-title i {
+	font-size: 18px;
+	background-image: var(--ai-startup-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.site-form-card .help-block,
+.site-form-card .invalid-feedback {
+	color: #dc3545;
+	font-size: 14px;
+	margin-top: 4px;
+}
+
+.tf-btn.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.site-about .heading-section .title,
+.site-about-services .heading-section .title,
+.site-pricing .heading-section .title,
+.site-pricing-faq .heading-section .title,
+.site-testimonials-form .heading-section .title {
+	color: var(--color-title);
+}
+
+.site-about-services .heading-section .title {
+	color: var(--white);
+}
+
+/* ---------------------------------------------------------------- About */
+
+.site-about-image {
+	padding: 40px;
+	border-radius: 20px;
+	background: var(--color-bg-1);
+	border: 1px solid var(--color-border-1);
+	text-align: center;
+}
+
+.site-about-image img {
+	border-radius: 14px;
+}
+
+.site-about .mission-card .desc a {
+	word-break: break-word;
+}
+
+.site-about-services {
+	background-color: var(--ai-startup-light-dark);
+}
+
+.site-about-services .box-services-icon {
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+}
+
+.site-about-services .box-services-icon .icon span {
+	position: relative;
+	z-index: 2;
+	font-size: 36px;
+	color: var(--white);
+}
+
+.site-about-services .box-services-icon .desc {
+	margin-bottom: 20px;
+}
+
+.site-about-services__media img,
+.site-about-services__media iframe {
+	border-radius: 14px;
+}
+
+.site-about-services__more {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin-top: auto;
+	color: var(--white);
+}
+
+.site-about-services__more:hover {
+	color: #a291fe;
+}
+
+/* ---------------------------------------------------------------- FAQ */
+
+.site-faq-sidebar {
+	position: sticky;
+	top: 120px;
+}
+
+.site-faq-sidebar .wg-siderbar-category {
+	padding: 40px 36px 40px 40px;
+}
+
+.site-faq-sidebar .siderbar-category-item {
+	margin-bottom: 22px;
+	font-size: 18px;
+	line-height: 1.4;
+}
+
+.site-faq .according-item.style-2 .according-content .text,
+.site-pricing-faq .according-item .according-content .text {
+	max-width: none;
+	color: var(--color-paragraph);
+}
+
+.site-faq .according-item .title-according .text-title,
+.site-pricing-faq .according-item .title-according .text-title {
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+.site-faq .according-item .title-according .icon,
+.site-pricing-faq .according-item .title-according .icon {
+	flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------------- Testimonials */
+
+.site-testimonials .tes-item.no-img {
+	padding: 40px 32px;
+	background-color: var(--white);
+	box-shadow: 0 12px 46px rgba(0, 0, 0, 0.05);
+}
+
+.site-testimonials .tes-item .line {
+	margin-bottom: 24px;
+}
+
+.site-testimonials .tes-item .text-tes {
+	margin-bottom: 24px;
+	color: var(--color-title);
+	line-height: 1.5;
+}
+
+.site-testimonials .tes-item .name {
+	color: var(--color-title);
+}
+
+@media (max-width: 575px) {
+	.site-testimonials .tes-item.no-img {
+		padding: 30px 16px;
+	}
+}
+
+/* ---------------------------------------------------------------- Contact */
+
+.site-contact .list-contact-item .contact-item {
+	max-width: calc(50% - 15px);
+}
+
+.site-contact .list-contact-item .contact-item.contact-item-wide {
+	max-width: 100%;
+}
+
+.site-contact .contact-item .top-item {
+	margin-bottom: 30px;
+}
+
+.site-contact .contact-item .title {
+	color: var(--color-title);
+}
+
+.site-contact .contact-item .bottom-item a,
+.site-contact .contact-item .bottom-item p {
+	color: var(--color-paragraph);
+	word-break: break-word;
+}
+
+.site-contact .form-contact fieldset {
+	margin-bottom: 20px;
+}
+
+.site-contact .form-contact .form-group {
+	margin-bottom: 0;
+}
+
+.site-contact .form-contact .help-block,
+.site-contact .form-contact .invalid-feedback {
+	color: #ff9b9b;
+	font-size: 14px;
+	margin-top: 6px;
+}
+
+.site-contact .form-contact textarea {
+	font-size: 15px !important;
+}
+
+.site-contact-map {
+	height: auto;
+}
+
+.site-contact-map > div,
+.site-contact-map iframe {
+	width: 100% !important;
+}
+
+@media (max-width: 575px) {
+	.site-contact .list-contact-item .contact-item {
+		max-width: 100%;
+	}
+}
+
+/* ---------------------------------------------------------------- Subscribe */
+
+.site-subscribe .site-package-option {
+	max-width: 100%;
+	padding: 36px 32px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.site-subscribe .site-package-option .top-item {
+	margin-bottom: 14px;
+}
+
+.site-subscribe .site-package-option .plan-desc {
+	color: var(--color-paragraph);
+}
+
+.site-subscribe .site-package-option .site-package-option__btn {
+	margin: 24px 0 0;
+}
+
+.site-subscribe .site-package-option:hover {
+	border-color: var(--ai-startup-blue);
+}
+
+.site-subscribe .site-package-option.active {
+	background: #060606;
+	border-color: #060606;
+}
+
+.site-subscribe .site-package-option.active .plan-title,
+.site-subscribe .site-package-option.active .plan-price {
+	color: var(--white);
+}
+
+.site-subscribe .site-package-option.active .plan-desc {
+	color: var(--color-text-2);
+}
+
+/* ---------------------------------------------------------------- Pricing */
+
+.site-pricing-table {
+	padding: 20px;
+	border-radius: 20px;
+	background: var(--white);
+	border: 1px solid var(--color-border-1);
+}
+
+.site-pricing-table .dt-pricing {
+	margin-bottom: 0;
+}
+
+.site-pricing-table .dt-pricing thead th {
+	background: var(--ai-startup-light-dark);
+	color: var(--white);
+	border-color: var(--ai-startup-light-dark);
+	font-weight: 600;
+}
+
+.site-pricing-table .dt-pricing tr.dtrg-group td {
+	background: var(--color-bg-1);
+	color: var(--color-title);
+	font-weight: 600;
+}
+
+/* Contact page: the form sits on the page itself, next to the company details. */
+.site-contact .form-contact {
+	background: transparent;
+	padding: 0;
+	max-width: 100%;
+}
+
+/* About page: the company text next to the logo. */
+.site-about-text .heading-section .title {
+	font-size: clamp(28px, 2.6vw, 40px);
+	line-height: 1.2;
+}
+
+.site-about-text .desc {
+	color: var(--color-text-2);
+	margin-bottom: 16px;
+}
+
+/* Contact page: the form in a plain framed card, no background picture. */
+.site-contact .form-contact {
+	background: #131313;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+	padding: 36px 40px 44px;
+}
+
+@media (max-width: 575px) {
+	.site-contact .form-contact {
+		padding: 24px 20px 30px;
+	}
+}

@@ -1,0 +1,80 @@
+// COMPONENTS / PANEL
+// ------------------------------------
+
+.panel {
+	border-radius: 0;
+	&.panel-borderless {
+		border: 0;
+		.panel-heading {
+			border: 1px solid #c5c5c5;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+		}
+	}
+	&.panel-table {
+		> .panel-heading {
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+	}
+	.panel-title {
+		position: relative;
+		padding-right: 60px;
+		font-size: inherit;
+		&.panel-title-checkbox {
+			position: relative;
+			.mt-checkbox {
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				& > span {
+					left: 15px;
+					top: 10px;
+				}
+			}
+			.accordion-toggle {
+				padding-left: 45px;
+			}
+		}
+	}
+	.panel-actions {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 5px 15px;
+	}
+	.panel-body {
+		font-size: inherit;
+	}
+	&.blue-hoki {
+		border-color: #869ab3;
+		.panel-title {
+			background-color: #67809F;
+			.panel-heading {
+				background-color: transparent;
+				color: #fff;
+			}
+			.accordion-toggle {
+				color: #fff;
+			}
+			&.panel-title-checkbox {
+				.mt-checkbox > span:after {
+					border-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+// Use visibility instead of display
+.collapse.collapse-visibility {
+	height: 0;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	&.in {
+		height: auto;
+		visibility: visible;
+	}
+}

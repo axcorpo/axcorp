@@ -1,0 +1,10 @@
+// COMPONENTS / PORTLET
+// ------------------------------------
+
+.portlet {
+	& > .portlet-body {
+		p.help-block {
+			margin-top: 5px;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+// COMPONENTS / LIST
+// ------------------------------------
+
+.list-icon {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	> li {
+		position: relative;
+		padding-left: 24px;
+		display: block !important;
+		line-height: normal !important;
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 1px;
+			font-family: 'FontAwesome', 'Glyphicons Halflings';
+		}
+	}
+}
+
+.list-border-spacing {
+	& + .list-border-spacing {
+		padding-top: 5px;
+		margin-top: 5px;
+		border-top: 1px solid #ddd;
+	}
+}
+
+li.list-item-border-top {
+	padding-top: 5px;
+	margin-top: 5px;
+	border-top: 1px solid #ddd;
+	&:before {
+		top: 6px;
+	}
+}
+
+.list-spacing {
+	> li {
+		& + li {
+			margin-top: 5px;
+		}
+	}
+}
+
+.list-unindented {
+	padding-left: 18px;
+}
+
+.list-definition {
+	margin: 0;
+	& > dt ~ dt {
+		margin-top: 10px;
+	}
+	& > .inline-block + .inline-block {
+		margin-left: 10px;
+	}
+}

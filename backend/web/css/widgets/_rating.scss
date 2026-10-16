@@ -1,0 +1,20 @@
+// WIDGETS / RATING
+// ------------------------------------
+
+.rating-xxs {
+	font-size: 1.5em;
+}
+
+.dt-rating-container {
+	font-size: 1.2em;
+	.rating-stars {
+		cursor: default;
+	}
+	.filled-stars {
+		text-shadow: none;
+		-webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+	}
+	.star {
+		margin: 0 1px;
+	}
+}

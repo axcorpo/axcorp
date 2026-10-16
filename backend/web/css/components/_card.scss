@@ -1,0 +1,31 @@
+// COMPONENTS / CARD
+// ------------------------------------
+
+.card-block {
+	display: block;
+}
+
+.card {
+	&.card-outline {
+		&,
+		&:hover,
+		&:focus {
+			color: inherit;
+		}
+		padding: 5px;
+		border: 1px solid #ccc;
+	}
+	&.card-horizontal {
+		white-space: nowrap;
+		.card-icon {
+			margin-right: 10px;
+		}
+		.card-image {
+			margin-right: 10px;
+		}
+	}
+}
+
+a.card {
+	text-decoration: none;
+}

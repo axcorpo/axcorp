@@ -1,0 +1,19 @@
+// COMPONENTS / FIGURE
+// ------------------------------------
+
+.figure {
+	display: inline-block;
+	& + .figure {
+		margin-left: 10px;
+	}
+	&.figure-bordered {
+		border: 1px solid #ddd;
+		.figure-caption {
+			padding: 5px;
+			background-color: #eee;
+		}
+	}
+	&.figure-thumb {
+		width: 200px;
+	}
+}

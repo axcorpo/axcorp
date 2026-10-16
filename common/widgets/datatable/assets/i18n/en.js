@@ -1,0 +1,32 @@
+$.extend(true, $.fn.dataTable.defaults.oLanguage, {
+	"oAria": {
+		"sSortAscending": ": activate to sort column ascending",
+		"sSortDescending": ": activate to sort column descending"
+	},
+	"oPaginate": {
+		"sFirst": "First",
+		"sLast": "Last",
+		"sNext": "Next",
+		"sPrevious": "Previous"
+	},
+	"select": {
+		"rows": {
+			"_": "%d rows selected",
+			"0": "",
+			"1": "%d row selected"
+		}
+	},
+	"sDecimal": "",
+	"sEmptyTable": "No data available in table",
+	"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+	"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+	"sInfoFiltered": "(filtered from _MAX_ total entries)",
+	"sInfoPostFix": "",
+	"sLengthMenu": "Show _MENU_ entries",
+	"sLoadingRecords": "Loading...",
+	"sProcessing": "Processing...",
+	"sSearch": "Search:",
+	"sSearchPlaceholder": "",
+	"sThousands": ",",
+	"sZeroRecords": "No matching records found"
+});

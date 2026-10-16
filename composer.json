@@ -1,0 +1,139 @@
+{
+	"name": "yiisoft/yii2-app-advanced",
+	"description": "SaaS - Master App",
+	"keywords": [
+		"tws",
+		"saas",
+		"master"
+	],
+	"homepage": "https://www.treewebsolutions.com/",
+	"authors": [
+		{
+			"name": "Tree Web Solutions",
+			"email": "treewebsolutions.com@gmail.com"
+		}
+	],
+	"type": "project",
+	"license": "BSD-3-Clause",
+	"support": {
+		"issues": "https://github.com/yiisoft/yii2/issues?state=open",
+		"forum": "http://www.yiiframework.com/forum/",
+		"wiki": "http://www.yiiframework.com/wiki/",
+		"irc": "irc://irc.freenode.net/yii",
+		"source": "https://github.com/yiisoft/yii2"
+	},
+	"minimum-stability": "stable",
+	"require": {
+		"php": ">=8.1.0",
+		"yiisoft/yii2": "~2.0.21",
+		"yiisoft/yii2-bootstrap": "~2.0.0",
+		"bower-asset/bootstrap": "^3.4.1",
+		"yiisoft/yii2-symfonymailer": "^4.0",
+		"yiisoft/yii2-httpclient": "~2.0.0",
+		"yii2tech/ar-softdelete": "*",
+		"yii2tech/ar-position": "^1.0",
+		"omnilight/yii2-scheduling": "*",
+		"lajax/yii2-translate-manager": "^1.7",
+		"codemix/yii2-localeurls": "^1.7",
+		"kartik-v/yii2-dialog": "@dev",
+		"kartik-v/yii2-widget-growl": "*",
+		"kartik-v/yii2-widget-depdrop": "@dev",
+		"kartik-v/yii2-widget-select2": "@dev",
+		"kartik-v/yii2-widget-colorinput": "*",
+		"kartik-v/yii2-widget-fileinput": "@dev",
+		"kartik-v/yii2-widget-switchinput": "*",
+		"kartik-v/yii2-widget-typeahead": "*",
+		"kartik-v/yii2-widget-rating": "*",
+		"kartik-v/yii2-slider": "*",
+		"kartik-v/yii2-number": "*",
+		"kartik-v/yii2-widget-touchspin": "*",
+		"kartik-v/yii2-mpdf": "*",
+		"kartik-v/yii2-context-menu": "*",
+		"kartik-v/yii2-nav-x": "*",
+		"2amigos/yii2-google-maps-library": "*",
+		"zelenin/yii2-rss": "~0.1",
+		"skeeks/yii2-assets-auto-compress": "*",
+	    "openspout/openspout": "^4.28",
+		"phpoffice/phpspreadsheet": "^1.7",
+		"jeroendesloovere/vcard": "dev-2.0.0-dev",
+		"richweber/yii2-google-translate-api": "dev-master",
+		"2amigos/qrcode-library": "^2.0",
+	    "stripe/stripe-php": "*",
+	    "borales/yii2-phone-input": "*",
+
+	  	"axcorpo/textfile": "dev-main",
+		"axcorpo/yii2": "dev-main",
+		"axcorpo/yii2-payment": "dev-main",
+	    "axcorpo/yii2-commercial": "dev-main",
+		"axcorpo/yii2-widget-sitemap": "dev-main",
+		"axcorpo/yii2-widget-carousel": "dev-main",
+		"axcorpo/yii2-widget-chart": "dev-main",
+		"axcorpo/yii2-widget-datetimepicker": "dev-main",
+		"axcorpo/yii2-widget-socialshare": "dev-main",
+		"axcorpo/yii2-widget-sortable": "dev-main",
+		"axcorpo/yii2-widget-tinymce": "dev-main",
+		"axcorpo/yii2-widget-typeahead": "dev-main",
+
+		"npm-asset/font-awesome": "~4.7.0",
+		"npm-asset/simple-line-icons": "~2.4.1",
+		"npm-asset/animate.css": "~3.7.2",
+		"npm-asset/iframe-resizer": "~4.2.6",
+		"npm-asset/fancyapps--fancybox": "~3.5.7",
+		"ramsey/uuid": "^4.9",
+		"cebe/yii2-loki-log-target": "^1.2"
+	},
+	"require-dev": {
+		"yiisoft/yii2-debug": "~2.0.0",
+		"yiisoft/yii2-gii": "^2.2.7",
+		"yiisoft/yii2-faker": "~2.0.0",
+		"codeception/codeception": "^5.0",
+		"phpunit/phpunit": "^9.5 || ^10.0",
+		"codeception/verify": "^2.0"
+	},
+	"config": {
+	  "process-timeout": 1800,
+	  "platform-check": false,
+	  "allow-plugins": {
+		"yiisoft/yii2-composer": true
+	  },
+	  "audit": {
+		"block-insecure": false
+	  }
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "2amigos/yii2-google-maps-library",
+				"version": "1.1.9",
+				"dist": {
+					"type": "zip",
+					"url": "https://github.com/2amigos/yii2-google-maps-library/archive/refs/tags/1.1.9.zip"
+				},
+				"require": {
+					"yiisoft/yii2": "*",
+					"guzzlehttp/guzzle": "^7.9"
+				},
+				"autoload": {
+					"psr-4": {"dosamigos\\google\\maps\\": ""}
+				}
+			}
+		},
+	  	{"type": "vcs", "url": "git@github.com:axcorpo/textfile.git"},
+		{"type": "vcs", "url": "git@github.com:axcorpo/yii2.git"},
+		{"type": "vcs", "url": "git@github.com:axcorpo/yii2-payment.git"},
+	    {"type": "vcs", "url": "git@github.com:axcorpo/yii2-commercial.git"},
+		{"type": "vcs", "url": "git@github.com:axcorpo/yii2-widget-sitemap.git"},
+		{"type": "vcs", "url": "git@github.com:axcorpo/yii2-widget-carousel.git"},
+		{"type": "vcs", "url": "git@github.com:axcorpo/yii2-widget-chart.git"},
+		{"type": "vcs", "url": "git@github.com:axcorpo/yii2-widget-datetimepicker.git"},
+		{"type": "vcs", "url": "git@github.com:axcorpo/yii2-widget-socialshare.git"},
+		{"type": "vcs", "url": "git@github.com:axcorpo/yii2-widget-sortable.git"},
+		{"type": "vcs", "url": "git@github.com:axcorpo/yii2-widget-tinymce.git"},
+		{"type": "vcs", "url": "git@github.com:axcorpo/yii2-widget-typeahead.git"}
+	]
+}

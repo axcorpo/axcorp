@@ -1,0 +1,69 @@
+// COMPONENTS / BUTTON
+// ------------------------------------
+
+.btn {
+	&.btn-flat {
+		color: #333;
+		background-color: #eee;
+		border-color: #ccc;
+		&:hover {
+			background-color: #ddd;
+		}
+	}
+}
+
+.btn-radius {
+	border-radius: 50% !important;
+}
+
+.btn-fab {
+	border-radius: 50% !important;
+	&.btn-xlg {
+		width: 60px;
+		height: 60px;
+		font-size: 20px;
+		font-weight: 400;
+	}
+}
+
+label.btn-inline {
+	margin: 5px 7px 5px 0;
+}
+.btn-selection {
+	position: relative;
+	padding: 10px 30px;
+	border-width: 2px;
+	white-space: normal;
+	&::before {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 40px 40px 0;
+		border-color: transparent #c9f1ae transparent transparent;
+	}
+	&::after {
+		position: absolute;
+		right: 5px;
+		top: 2px;
+		font-family: 'FontAwesome';
+	}
+}
+// Checked state
+input:checked ~ .btn-selection,
+.btn-selection.active {
+	border-color: #c9f1ae;
+	background-color: #fff;
+	&::before {
+		content: '';
+	}
+	&::after {
+		content: '\f00c';
+	}
+}
+
+.btn-transparent {
+	background-color: transparent;
+}

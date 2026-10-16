@@ -1,0 +1,40 @@
+// COMPONENTS / MODAL
+// ------------------------------------
+
+.modal-open {
+	overflow: hidden !important;
+}
+
+.modal-backdrop {
+	z-index: 10000 !important;
+}
+
+.modal {
+	z-index: 10010 !important;
+	.modal-title {
+		font-weight: 700;
+		font-size: 16px;
+	}
+	.modal-content {
+		border-radius: 0;
+	}
+}
+
+.close {
+	text-indent: inherit;
+	background-image: none !important;
+}
+
+// Multiple modals
+.modal-backdrop ~ .modal-backdrop {
+	z-index: 10010 !important;
+}
+.modal ~ .modal {
+	z-index: 10020 !important;
+}
+
+@media (min-width: 1200px) {
+	.modal-lg {
+		width: 1000px;
+	}
+}

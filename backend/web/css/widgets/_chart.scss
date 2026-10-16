@@ -1,0 +1,16 @@
+// WIDGETS / CHART
+// ------------------------------------
+
+.chart-container {
+	overflow: auto;
+	.chart-label {
+		padding: 2px;
+		font-size: 12px;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: #fff;
+	}
+	.legendColorBox {
+		padding-right: 5px;
+	}
+}

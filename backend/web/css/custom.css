@@ -1,0 +1,93 @@
+.dt-scroll-x {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.link > a {
+	color: #c5c5c5; !important;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.link > a:hover, .page-header.navbar .top-menu .navbar-nav > li.link > a:focus {
+	background-color: #393939;
+}
+
+/* borales/yii2-phone-input (intl-tel-input): keep phone inputs at their previous full width */
+.iti {
+	display: block;
+	width: 100%;
+}
+.iti > input,
+.iti > input[type="tel"] {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* Inside a modal the widget initializes before the modal is laid out, so intl-tel-input
+   measures a bogus flag width (~the viewport) and pins a giant inline `padding-left` on the
+   input (~976px observed) — the field then blows past the modal edge and hides what you type.
+   `.modal` scope + `!important` beat that inline style: fill the column and clear only the
+   flag + separate dial code. Full-page forms measure correctly and keep the vendor behaviour. */
+.modal .iti {
+	display: block !important;
+	width: 100% !important;
+}
+.modal .iti > input,
+.modal .iti > input[type="tel"] {
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box !important;
+	padding-left: 80px !important;
+}
+/* Guard against the same bogus measurement widening the (absolutely positioned) flag box. */
+.modal .iti .iti__flag-container {
+	max-width: 100% !important;
+}
+
+/* Secret fields: eye toggle to reveal/hide keys and passwords */
+.input-secret {
+	position: relative;
+}
+.input-secret .form-control {
+	padding-right: 38px;
+}
+.input-secret .toggle-secret {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+	color: #999;
+	z-index: 3;
+	font-size: 14px;
+}
+.input-secret .toggle-secret:hover {
+	color: #333;
+}
+.input-secret textarea.secret-hidden {
+	-webkit-text-security: disc;
+}
+
+/* Sticky page bar: keep the breadcrumbs pinned just below the 50px fixed header
+   while content scrolls. Color is preserved (the theme's #fafafa page-bar), only
+   the positioning changes. z-index stays under the header (9995) so its dropdowns
+   still overlay the bar.
+
+   Only >=992px: below that the theme switches the header to position:relative, so
+   a top:50px sticky bar would float mid-viewport; leave it in static flow there. */
+@media (min-width: 992px) {
+	.page-content .page-bar {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 50px;
+		z-index: 9990;
+		/* Force the existing page-bar color as a solid background so scrolled
+		   content doesn't show through once the bar sticks. */
+		background-color: #fafafa;
+	}
+}
+
+/* Header logo sizing (overrides the compiled main-app.css default of margin:0) */
+.page-header.navbar .page-logo .logo-default {
+	max-width: 155px;
+	max-height: 40px;
+	margin: 7px 0;
+}

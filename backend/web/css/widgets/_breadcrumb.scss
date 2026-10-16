@@ -1,0 +1,44 @@
+// WIDGETS / BREADCRUMB
+// ------------------------------------
+
+.page-breadcrumb {
+	& > li:not(:last-child):after {
+		content: none;
+	}
+	& > li {
+		& + li:not(.page-links) {
+			&:before {
+				content: '\f111';
+				font: normal 5px 'FontAwesome';
+				margin: 0 7px 0 3px;
+				position: relative;
+				top: -3px;
+				opacity: .4;
+			}
+		}
+	}
+}
+.page-links {
+	&:before {
+		content: '(';
+	}
+	&:after {
+		content: ')';
+	}
+	& > a {
+		position: relative;
+		color: inherit;
+		& + a {
+			padding-left: 7px;
+			margin-left: 4px;
+			&:before {
+				content: '/';
+				position: absolute;
+				left: 0;
+			}
+		}
+		&.active {
+			text-decoration: underline;
+		}
+	}
+}

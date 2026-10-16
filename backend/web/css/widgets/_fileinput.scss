@@ -1,0 +1,42 @@
+// WIDGETS / FILEINPUT
+// ------------------------------------
+
+.file-input {
+	.file-preview {
+		padding: 8px;
+		margin: 0 0 5px 0;
+		border: 1px solid #ddd;
+	}
+	.file-drop-zone {
+		padding: 0;
+		margin: 0;
+		border: 0;
+		&.file-highlighted {
+			border-width: 1px !important;
+		}
+	}
+	.file-caption-info:empty,
+	.file-size-info:empty {
+		display: none;
+	}
+	.file-preview-frame {
+		background-color: #fafafa;
+		> .file-thumbnail-footer {
+			min-height: 30px;
+			height: auto;
+		}
+	}
+	.file-default-preview {
+		img {
+			max-width: 150px;
+		}
+	}
+	.fa {
+		line-height: normal;
+	}
+	.file-preview-frame-nofigure {
+		.kv-file-content {
+			display: none;
+		}
+	}
+}

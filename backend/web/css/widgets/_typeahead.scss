@@ -1,0 +1,23 @@
+// WIDGETS / TYPEAHEAD
+// ------------------------------------
+
+.typeahead__container {
+	font: inherit !important;
+	.typeahead__field {
+		button.disabled, button[disabled],
+		input.disabled, input[disabled] {
+			cursor: not-allowed;
+			pointer-events: inherit;
+			opacity: 1;
+			box-shadow: none;
+			background-color: #eee;
+			border-color: inherit;
+		}
+		input,
+		textarea {
+			font-size: 14px;
+		}
+	}
+}
+
+

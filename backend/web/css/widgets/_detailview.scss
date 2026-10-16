@@ -1,0 +1,22 @@
+// WIDGETS / DETAILVIEW
+// ------------------------------------
+
+.detail-view {
+	&.detail-view-fixed {
+		th {
+			width: 20px !important;
+			white-space: nowrap;
+		}
+	}
+	.file-input {
+		.file-preview-thumbnails {
+			display: block !important;
+		}
+	}
+	.gallery-thumbnail {
+		img {
+			width: auto;
+			max-height: 120px;
+		}
+	}
+}

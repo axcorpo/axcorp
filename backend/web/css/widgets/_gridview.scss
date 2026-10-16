@@ -1,0 +1,53 @@
+// WIDGETS / GRIDVIEW
+// ------------------------------------
+
+.grid-view {
+	th:not(.col-autowidth),
+	td:not(.col-autowidth) {
+		min-width: 130px;
+	}
+	thead {
+		a[data-sort] {
+			position: relative;
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				color: #72a4f7;
+			}
+			&:after {
+				content: '\f0dc';
+				font-family: 'FontAwesome';
+				margin-left: 10px;
+			}
+			&.asc:after {
+				content: '\f0de';
+				color: inherit;
+			}
+			&.desc:after {
+				content: '\f0dd';
+				color: inherit;
+			}
+		}
+	}
+	.filters {
+		> td {
+			padding: 0 !important;
+			border-left: 0;
+			border-right: 0;
+			border-bottom: 0;
+		}
+	}
+	.grid-reset-filters {
+		white-space: nowrap;
+	}
+	.small-info {
+		font-size: 85%;
+		font-weight: 500;
+	}
+	.pagination {
+		margin-top: 20px;
+	}
+	.summary {
+		margin-top: 20px;
+	}
+}

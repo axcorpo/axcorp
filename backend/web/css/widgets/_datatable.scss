@@ -1,0 +1,135 @@
+// WIDGETS / DATATABLE
+// ------------------------------------
+
+.dataTables_wrapper {
+	position: relative;
+	.dataTables_processing {
+		background-color: #fff;
+		z-index: 5;
+	}
+}
+
+.dataTables_length {
+	select.form-control {
+		width: auto;
+		-webkit-appearance: menulist;
+		-moz-appearance: menulist;
+	}
+}
+
+.table.data-table {
+	tr {
+		&.selected {
+			color: inherit;
+			background-color: #f3f4f6;
+		}
+		&.group {
+			& > td {
+				background-color: #f3f4f6;
+			}
+		}
+		&.child {
+			.dtr-details {
+				display: block;
+				.dtr-title,
+				.dtr-data {
+					display: block;
+				}
+			}
+		}
+	}
+	.form-control,
+	.input-group {
+		width: 100%;
+	}
+	.input-group {
+		.input-group-addon {
+			width: 1px;
+			background-color: transparent;
+		}
+	}
+	.filters-row {
+		> .filter-column {
+			padding: 0;
+			font-weight: 400;
+			vertical-align: middle;
+			text-align: center;
+		}
+		.select2-selection,
+		.form-control {
+			border-color: #ddd;
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+	}
+	.checkbox-column {
+		white-space: nowrap;
+		width: 20px !important;
+		&:focus {
+			outline: none;
+		}
+		.mt-checkbox {
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 19px;
+		}
+	}
+	// Actions
+	.filter-column,
+	.action-column {
+		> div {
+			& + div {
+				margin-top: 5px;
+			}
+		}
+		.btn {
+			min-width: 25px;
+			margin: 0;
+			& + .btn {
+				margin-left: 5px;
+			}
+		}
+	}
+	.action-column {
+		white-space: nowrap;
+	}
+	// Widgets
+	.progress {
+		margin-bottom: 0;
+		> .progress-bar {
+			font-weight: 700;
+			text-align: left;
+			text-indent: 5px;
+			text-shadow: 1px 1px 1px #fff;
+			color: inherit;
+		}
+	}
+	.figure-column {
+		a {
+			display: inline-block;
+		}
+		img {
+			max-height: 40px;
+		}
+	}
+}
+
+.dataTables_scrollHeadInner {
+	border-bottom: 1px solid #ddd;
+}
+.DTFC_LeftWrapper,
+.DTFC_RightWrapper {
+	z-index: 4;
+}
+
+// Override
+.data-table {
+	&.dataTable tbody tr.selected a,
+	&.dataTable tbody th.selected a,
+	&.dataTable tbody td.selected a {
+		color: #fff;
+		&.btn-default {
+			color: inherit;
+		}
+	}
+}

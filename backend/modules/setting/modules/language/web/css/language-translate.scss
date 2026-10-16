@@ -1,0 +1,29 @@
+
+#dt-language-translations {
+	min-width: 450px;
+	& > tbody {
+		.translation-column {
+			& > textarea {
+				display: none;
+			}
+		}
+	}
+
+	.control-source,
+	.control-translation {
+		min-height: 45px;
+		padding: 5px;
+		overflow: auto;
+		outline: 1px dashed #ddd;
+		&:hover,
+		&.mce-edit-focus {
+			outline: 1px dashed #000;
+		}
+	}
+	.control-source {
+		cursor: pointer;
+	}
+	.control-translation {
+		cursor: text;
+	}
+}

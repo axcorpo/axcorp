@@ -1,0 +1,154 @@
+// COMPONENTS / FORM
+// ------------------------------------
+
+// Controls
+@import 'form/checkbox';
+@import 'form/fieldset';
+@import 'form/inputgroup';
+@import 'form/radio';
+
+textarea.form-control {
+	white-space: inherit;
+	min-height: 36px;
+}
+
+select.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	&[multiple] {
+		height: 34px;
+		overflow: hidden;
+		> option {
+			visibility: hidden;
+		}
+	}
+}
+textarea {
+	resize: vertical;
+}
+.form-control[disabled],
+.form-control.disabled {
+	background-color: #eee;
+	opacity: 1;
+	cursor: not-allowed;
+}
+.form-control[readonly],
+.form-control.readonly {
+	background: #eee;
+	opacity: 1;
+	cursor: not-allowed;
+	//pointer-events: none;
+	//touch-action: none;
+}
+
+// Required
+div.required label.control-label:after {
+	content: ' *';
+	color: #d64635;
+}
+
+// Form group
+.form-group {
+	margin-bottom: 10px;
+	.required {
+		padding-left: 0;
+	}
+}
+.form-group-inline {
+	> .form-group {
+		margin-right: 30px;
+		display: inline-block;
+		.mt-checkbox,
+		.mt-radio {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Label
+.control-label {
+	font-weight: 700;
+	color: #444;
+}
+
+// Input Group
+.input-group {
+	&.input-group-addon-control {
+		> .input-group-addon {
+			min-width: 90px;
+			padding: 0;
+			border: 0;
+			text-align: inherit;
+		}
+	}
+}
+
+.form-actions {
+	&.floating {
+		position: fixed;
+		bottom: 5px;
+		right: 17px;
+		z-index: 1000001;
+		.modal-open & {
+			z-index: 9999;
+		}
+	}
+}
+
+// Metronic form override
+.form,
+.portlet-form {
+	.form-actions {
+		&.top {
+			margin-bottom: 0;
+		}
+	}
+}
+.help-block {
+	margin-bottom: 0;
+	&:empty {
+		display: none;
+	}
+}
+
+// Error
+.has-error {
+	> .mt-checkbox,
+	> .mt-checkbox:hover,
+	> .mt-checkbox:focus {
+		input + span {
+			border-color: #a94442 !important;
+		}
+	}
+	.help-block[class="help-block"] {
+		display: none;
+	}
+}
+.error-summary.alert {
+	& > ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+}
+
+// SEO Hint
+.seo-hint-warning,
+.seo-hint-warning:focus {
+	border-color: #c78603;
+}
+.seo-hint-danger,
+.seo-hint-danger:focus {
+	border-color: #a94442;
+}
+.seo-hint {
+	.fa {
+		margin-right: 5px;
+	}
+	&.text-warning {
+		color: #c78603;
+	}
+	&.text-danger {
+		color: #a94442;
+	}
+}

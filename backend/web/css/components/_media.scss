@@ -1,0 +1,12 @@
+// COMPONENTS / MEDIA
+// ------------------------------------
+
+.media {
+	.media-object-sm {
+		width: em(32px);
+		height: em(32px);
+		&.rounded {
+			border-radius: 50%;
+		}
+	}
+}

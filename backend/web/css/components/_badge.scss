@@ -1,0 +1,13 @@
+// COMPONENTS / LABEL
+// ------------------------------------
+
+.badge {
+	&.badge-outline {
+		height: auto;
+		border: 1px solid #ccc;
+		margin: 0 5px 5px 0;
+		background-color: transparent;
+		color: inherit;
+		font-size: inherit !important;
+	}
+}

@@ -1,0 +1,32 @@
+// COMPONENTS / FORM / FIELDSET
+// ------------------------------------
+
+.fieldset {
+	border: 1px solid #ddd;
+	padding: 10px;
+	> legend {
+		width: auto;
+		padding: 0 5px;
+		border-bottom: 0;
+		margin-bottom: 0;
+		font-size: 14px;
+		font-weight: 700;
+		display: inline-block;
+	}
+	& + .fieldset {
+		margin-top: 10px;
+	}
+	&.fieldset-minh {
+		min-height: 345px;
+	}
+
+	&.fieldset-with-actions {
+		position: relative;
+		padding-top: 15px;
+		.fieldset-actions {
+			position: absolute;
+			right: 10px;
+			top: -5px;
+		}
+	}
+}

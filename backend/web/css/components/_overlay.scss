@@ -1,0 +1,48 @@
+// COMPONENTS / OVERLAY
+// ------------------------------------
+
+.overlay-context {
+	position: relative;
+}
+.overlay-wrapper {
+	width: 100%;
+	height: 100%;
+	padding: 0.5em 1em;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	background: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	&:before {
+		content: '';
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.overlay-body {
+		padding-left: 2em;
+		display: inline-block;
+		position: relative;
+		text-align: left;
+		&:before {
+			content: '\f110';
+			font-family: 'FontAwesome';
+			font-size: 1.8em;
+			display: block;
+			-webkit-animation: fa-spin 1s infinite steps(10);
+			-moz-animation: fa-spin 1s infinite steps(10);
+			-o-animation: fa-spin 1s infinite steps(10);
+			animation: fa-spin 1s infinite steps(10);
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -15px;
+		}
+	}
+}
+body.overlay-context > .overlay-wrapper {
+	position: fixed;
+	z-index: 1000005;
+	background: rgba(54, 65, 80, 0.4);
+}

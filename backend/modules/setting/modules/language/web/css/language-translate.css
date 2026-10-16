@@ -1,0 +1,20 @@
+#dt-language-translations {
+  min-width: 450px; }
+  #dt-language-translations > tbody .translation-column > textarea {
+    display: none; }
+  #dt-language-translations .control-source,
+  #dt-language-translations .control-translation {
+    min-height: 45px;
+    padding: 5px;
+    overflow: auto;
+    outline: 1px dashed #ddd; }
+    #dt-language-translations .control-source:hover, #dt-language-translations .control-source.mce-edit-focus,
+    #dt-language-translations .control-translation:hover,
+    #dt-language-translations .control-translation.mce-edit-focus {
+      outline: 1px dashed #000; }
+  #dt-language-translations .control-source {
+    cursor: pointer; }
+  #dt-language-translations .control-translation {
+    cursor: text; }
+
+/*# sourceMappingURL=language-translate.css.map */

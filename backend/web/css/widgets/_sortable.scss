@@ -1,0 +1,58 @@
+
+.sortable-container {
+	margin: -10px 0;
+	ol, ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		ol, ul {
+			padding: 0 0 0 25px;
+		}
+	}
+	.sortable-item {
+		&.danger {
+			background-color: rgba(255, 0, 0, 0.1);
+		}
+		.sortable-item__content {
+			margin: 10px 0;
+			padding: 10px;
+			border: 1px solid #d4d4d4;
+			border-radius: 3px;
+		}
+		&.sortable-item--with-handle {
+			.sortable-item__content {
+				padding-left: 50px;
+			}
+			.sortable-item__handle {
+				position: absolute;
+				top: 15px;
+				left: 12px;
+				z-index: 10;
+				font-size: 24px;
+				color: #ddd;
+				cursor: move;
+				&:hover {
+					color: #777;
+				}
+			}
+		}
+		.sortable-item__actions {
+			position: absolute;
+			right: 6px;
+			top: 6px;
+			z-index: -1;
+		}
+		.sortable-item__content {
+			&:hover > .sortable-item__actions {
+				z-index: 1;
+			}
+		}
+	}
+	.sortable-item_placeholder {
+		min-height: 42px;
+		border: 1px dashed #4183C4;
+	}
+	.sortable-item--error {
+		background-color: #fbe3e4;
+	}
+}

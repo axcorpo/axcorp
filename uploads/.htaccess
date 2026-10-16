@@ -1,0 +1,36 @@
+# Uploads are user-supplied content. Nothing in this tree may ever be executed:
+# the application writes here, and Apache serves the directory directly
+# (see the `^uploads/(.*)$` rule in master/.htaccess).
+
+Options -Indexes -ExecCGI
+
+# Kill every server-side handler, whatever the extension.
+<IfModule mod_php.c>
+	php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+	php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+	php_flag engine off
+</IfModule>
+
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8 .phps .pht .shtml .cgi .pl .py
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8 .phps .pht .shtml .cgi .pl .py
+AddType text/plain .php .phtml .php3 .php4 .php5 .php7 .php8 .phps .pht .shtml .cgi .pl .py
+
+# php-fpm is wired through a handler, which RemoveHandler does not always reach.
+# SetHandler none unbinds it; the deny is the backstop if a handler survives anyway.
+<FilesMatch "\.(?i:ph(?:p[0-9]?|tml|ps|t)|s?html|cgi|pl|py)$">
+	SetHandler none
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Deny from all
+	</IfModule>
+</FilesMatch>
+
+# SVG is deliberately absent: it is served from the application's own origin and can
+# carry script, which would turn an avatar upload back into stored XSS.

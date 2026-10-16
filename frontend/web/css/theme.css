@@ -1,0 +1,809 @@
+/**
+ * Agentra theme integration.
+ *
+ * Loaded after theme/css/styles.css and css/custom.css: it maps Bootstrap's components
+ * (buttons, forms, cards, dropdowns, pagination, alerts) used by the application's views
+ * and widgets onto the theme's palette, neutralises the rules custom.css still carries for
+ * the previous theme, and keeps the handful of utility classes the views used from it.
+ */
+
+:root {
+	--bs-primary: #5C57E7;
+	--bs-primary-rgb: 92, 87, 231;
+	--bs-link-color: #5C57E7;
+	--bs-link-color-rgb: 92, 87, 231;
+	--bs-link-hover-color: #3f3ad0;
+	--bs-body-font-family: "DM Sans", sans-serif;
+	--bs-border-radius: 14px;
+	--theme-radius: 20px;
+	--theme-surface: #F7F7FB;
+}
+
+/* ---------------------------------------------------------------- Base */
+
+body {
+	position: relative;
+	font-family: "DM Sans", sans-serif;
+	color: var(--color-paragraph);
+}
+
+body.offcanvas-open,
+body.modal-open {
+	overflow: hidden;
+}
+
+a {
+	color: inherit;
+}
+
+.text-muted {
+	color: var(--color-paragraph) !important;
+}
+
+.text-primary {
+	color: var(--ai-startup-blue) !important;
+}
+
+.bg-light {
+	background-color: var(--theme-surface) !important;
+}
+
+.hidden {
+	display: none !important;
+}
+
+/* Safety net: main.js removes the preloader on DOM ready; if a script on the page fails
+   before that, the page still shows up. */
+.preload {
+	animation: theme-preload-out 0.4s ease 4s forwards;
+}
+
+@keyframes theme-preload-out {
+	to {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+}
+
+/* ---------------------------------------------------------------- Logo */
+
+.header .logo .site-logo {
+	max-width: 230px;
+	height: auto;
+}
+
+.footer .logo-footer .site-logo {
+	max-width: 220px;
+	height: auto;
+}
+
+.offcanvas-mobile .logo-site .site-logo {
+	max-width: 160px;
+	height: auto;
+}
+
+@media (max-width: 575px) {
+	.header .logo .site-logo {
+		max-width: 150px;
+	}
+}
+
+/* ---------------------------------------------------------------- Header */
+
+.header-icon-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border: 1px solid var(--color-border-5);
+	background: rgba(255, 255, 255, 0.06);
+	backdrop-filter: blur(10px);
+	color: var(--white);
+	font-size: 20px;
+	transition: all 0.3s ease;
+}
+
+.header-icon-btn:hover,
+.header-icon-btn[aria-expanded="true"] {
+	background: var(--ai-startup-blue);
+	border-color: var(--ai-startup-blue);
+	color: var(--white);
+}
+
+.header-icon-btn.dropdown-toggle::after {
+	display: none;
+}
+
+.header-dropdown .dropdown-menu {
+	min-width: 220px;
+	margin-top: 12px !important;
+	padding: 12px 0;
+	border: 0;
+	border-radius: 16px;
+	box-shadow: 0 12px 46px rgba(0, 0, 0, 0.12);
+}
+
+.header-dropdown .dropdown-item {
+	display: block;
+	padding: 8px 22px;
+	font-size: 15px;
+	color: var(--color-title);
+	white-space: nowrap;
+}
+
+.header-dropdown .dropdown-item:hover,
+.header-dropdown .dropdown-item:focus,
+.header-dropdown .dropdown-item.active {
+	background: var(--color-bg-1);
+	color: var(--ai-startup-blue);
+}
+
+.header-dropdown .dropdown-item-title {
+	font-weight: 600;
+	color: var(--color-title);
+}
+
+.header-dropdown .dropdown-item-title:hover {
+	background: transparent;
+	color: var(--color-title);
+}
+
+.header-dropdown .dropdown-divider {
+	margin: 8px 0;
+	border-color: var(--color-border-2);
+}
+
+/* ---------------------------------------------------------------- Page title */
+
+.page-title .page-title-content h1.title-page {
+	margin-top: 0;
+}
+
+.breadkcum {
+	flex-wrap: wrap;
+	gap: 12px 24px;
+}
+
+.breadkcum a,
+.breadkcum span {
+	color: var(--white);
+}
+
+/* custom.css styles the old theme's breadcrumb list */
+.breadkcum li:not(:last-child):after {
+	content: none !important;
+}
+
+/* ---------------------------------------------------------------- Footer */
+
+footer.footer {
+	padding: 0 !important;
+}
+
+.footer.footer a {
+	color: inherit;
+}
+
+.footer .container .mt-3 {
+	margin-top: 1rem !important;
+}
+
+.footer .footer-description {
+	color: var(--color-text-1);
+	margin-bottom: 24px;
+}
+
+.footer .footer-social li a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border: 1px solid var(--color-border-5);
+	color: var(--white);
+	transition: all 0.3s ease;
+}
+
+.footer .footer-social li a:hover {
+	background: var(--ai-startup-blue);
+	border-color: var(--ai-startup-blue);
+}
+
+.footer .support-item-footer span,
+.footer .support-item-footer a {
+	color: var(--color-text-2);
+}
+
+.footer .support-item-footer a:hover {
+	color: var(--white);
+}
+
+.footer .form-newsletter .form-control {
+	height: auto !important;
+	width: 100%;
+	border: 1px solid var(--color-border-3);
+}
+
+.footer .form-newsletter .help-block,
+.footer .form-newsletter .invalid-feedback {
+	color: #ff8a8a;
+	font-size: 13px;
+	margin-top: 4px;
+}
+
+.footer .anpc-logo {
+	display: inline-block;
+	width: 170px;
+	border: 0;
+}
+
+/* ---------------------------------------------------------------- Buttons */
+
+.btn {
+	border-radius: 999px;
+	padding: 10px 24px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.btn-sm {
+	padding: 6px 16px;
+}
+
+.btn-lg {
+	padding: 14px 32px;
+}
+
+.btn-primary,
+.btn-primary:focus {
+	background: var(--ai-startup-blue);
+	border-color: var(--ai-startup-blue);
+	color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active {
+	background: var(--ai-startup-light-dark) !important;
+	border-color: var(--ai-startup-light-dark) !important;
+	color: var(--white) !important;
+}
+
+.btn-outline-primary {
+	border-color: var(--ai-startup-blue);
+	color: var(--ai-startup-blue);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary.active {
+	background: var(--ai-startup-blue) !important;
+	border-color: var(--ai-startup-blue) !important;
+	color: var(--white) !important;
+}
+
+.btn-soft-primary {
+	background: var(--color-bg-1);
+	border: 1px solid transparent;
+	color: var(--ai-startup-blue);
+}
+
+.btn-soft-primary:hover,
+.btn-soft-primary:focus,
+.btn-soft-primary.active {
+	background: var(--ai-startup-blue);
+	color: var(--white);
+}
+
+/* ---------------------------------------------------------------- Forms */
+
+.form-control,
+.form-select {
+	border-radius: 12px;
+	border-color: var(--color-border-2);
+	color: var(--color-title);
+}
+
+textarea.form-control {
+	height: auto !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+	border-color: var(--ai-startup-blue);
+	box-shadow: 0 0 0 3px rgba(92, 87, 231, 0.12);
+}
+
+.form-label,
+.control-label {
+	font-weight: 500;
+	color: var(--color-title);
+}
+
+.form-check-input:checked {
+	background-color: var(--ai-startup-blue);
+	border-color: var(--ai-startup-blue);
+}
+
+/* ---------------------------------------------------------------- Cards, tables, pagination */
+
+.card {
+	border-radius: var(--theme-radius);
+	border: 1px solid var(--color-border-2);
+}
+
+.card.border-0 {
+	border: 0;
+}
+
+.shadow {
+	box-shadow: 0 12px 46px rgba(0, 0, 0, 0.07) !important;
+}
+
+.rounded {
+	border-radius: var(--theme-radius) !important;
+}
+
+.pagination .page-link {
+	border-radius: 10px;
+	margin: 0 3px;
+	color: var(--color-title);
+	border-color: var(--color-border-2);
+}
+
+.pagination .active > .page-link,
+.pagination .page-item.active .page-link {
+	background: var(--ai-startup-blue);
+	border-color: var(--ai-startup-blue);
+	color: var(--white);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+	background: var(--ai-startup-blue);
+}
+
+.dropdown-menu {
+	border-radius: 14px;
+}
+
+/* ---------------------------------------------------------------- Utilities the views used from the old theme */
+
+.section {
+	padding: 100px 0;
+	position: relative;
+}
+
+@media (max-width: 767px) {
+	.section {
+		padding: 60px 0;
+	}
+}
+
+.section-title {
+	position: relative;
+}
+
+.section-title .title {
+	font-weight: 600;
+	color: var(--color-title);
+	letter-spacing: -0.02em;
+}
+
+.mt-60 {
+	margin-top: 60px;
+}
+
+.mt-100 {
+	margin-top: 100px;
+}
+
+.fea {
+	stroke-width: 1.8;
+}
+
+.fea.icon-sm {
+	height: 16px;
+	width: 16px;
+}
+
+.fea.icon-md {
+	height: 32px;
+	width: 32px;
+}
+
+.component-wrapper .title {
+	padding: 1.5rem;
+	border-bottom: 1px solid var(--color-border-2);
+}
+
+.login-page {
+	border-radius: var(--theme-radius);
+}
+
+.forgot-pass {
+	font-size: 15px;
+}
+
+.sidebar .widget + .widget {
+	margin-top: 30px;
+}
+
+/* ---------------------------------------------------------------- Account area */
+
+.section-account {
+	padding: 80px 0 100px;
+}
+
+.account-sidebar {
+	position: sticky;
+	top: 110px;
+	padding: 24px;
+	border-radius: var(--theme-radius);
+	background: var(--white);
+	box-shadow: 0 12px 46px rgba(0, 0, 0, 0.07);
+}
+
+.account-user {
+	gap: 14px;
+	padding-bottom: 20px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid var(--color-border-2);
+}
+
+.account-user__avatar {
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.account-user__name {
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--color-title);
+}
+
+#pills-tab {
+	box-shadow: none !important;
+	padding: 0 !important;
+}
+
+#pills-tab li a {
+	border-radius: 12px !important;
+	color: var(--color-title);
+}
+
+#pills-tab li a:hover {
+	background: var(--color-bg-1);
+	color: var(--ai-startup-blue);
+}
+
+#pills-tab li.active a,
+#pills-tab li a.active {
+	background: var(--ai-startup-blue) !important;
+	color: var(--white) !important;
+}
+
+/* ---------------------------------------------------------------- Rich content (CMS pages, articles) */
+
+.rich-content h1,
+.rich-content h2,
+.rich-content h3,
+.rich-content h4,
+.rich-content h5,
+.rich-content h6 {
+	color: var(--color-title);
+	margin: 1.5em 0 0.6em;
+}
+
+.rich-content p,
+.rich-content ul,
+.rich-content ol {
+	margin-bottom: 1em;
+}
+
+.rich-content ul {
+	list-style: disc;
+	padding-left: 1.4em;
+}
+
+.rich-content ol {
+	list-style: decimal;
+	padding-left: 1.4em;
+}
+
+.rich-content a {
+	color: var(--ai-startup-blue);
+	text-decoration: underline;
+}
+
+.rich-content img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+
+.rich-content table {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.rich-content table td,
+.rich-content table th {
+	border: 1px solid var(--color-border-2);
+	padding: 8px 12px;
+}
+
+/* ---------------------------------------------------------------- Cookie consent */
+
+#cookiebar {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1001;
+	padding: 24px 0;
+	background: var(--ai-startup-light-dark);
+	color: var(--color-text-2);
+	font-size: 15px;
+	line-height: 22px;
+	border-top: 1px solid var(--color-border-5);
+	box-shadow: 0 -12px 46px rgba(0, 0, 0, 0.35);
+	transition: transform 0.6s ease, visibility 0.6s;
+}
+
+#cookiebar::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-image: var(--ai-startup-gradient);
+}
+
+#cookiebar.hide {
+	transform: translateY(110%);
+	visibility: hidden;
+}
+
+#cookiebar h3 {
+	color: var(--white);
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+#cookiebar p {
+	margin-bottom: 0;
+	color: var(--color-text-2);
+}
+
+#cookiebar a.cookiebar-details-link {
+	margin-left: 5px;
+	color: #A291FE;
+	text-decoration: underline;
+}
+
+#cookiebar a.cookiebar-details-link:hover {
+	color: var(--white);
+}
+
+/* The three consent buttons (and "Save settings") share one look, so no choice is
+   visually favoured. */
+#cookiebar .cookiebar-actions {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+#cookiebar .cookiebar-actions .cookiebar-form,
+#cookiebar .cookiebar-actions > .cookiebar-btn {
+	flex: 1 1 0;
+	min-width: 0;
+	margin: 0;
+}
+
+#cookiebar .cookiebar-form .cookiebar-btn {
+	width: 100%;
+}
+
+#cookiebar .cookiebar-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 48px;
+	padding: 0 18px;
+	border: 1px solid var(--color-border-5);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.06);
+	color: var(--white);
+	font-size: 14px;
+	font-weight: 600;
+	white-space: nowrap;
+	transition: all 0.3s ease;
+}
+
+#cookiebar .cookiebar-btn:hover,
+#cookiebar .cookiebar-btn:focus {
+	background: var(--ai-startup-blue);
+	border-color: var(--ai-startup-blue);
+	color: var(--white);
+}
+
+#cookiebar .cookiebar-settings {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid var(--color-border-5);
+	max-height: 50vh;
+	overflow-y: auto;
+}
+
+#cookiebar .cookiebar-category {
+	margin-bottom: 14px;
+}
+
+#cookiebar .cookiebar-category .form-check {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+#cookiebar .cookiebar-category .form-check-input {
+	float: none;
+	margin: 0;
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	border-color: var(--color-text-1);
+	cursor: pointer;
+}
+
+#cookiebar .cookiebar-category .form-check-input:checked {
+	background-color: var(--ai-startup-blue);
+	border-color: var(--ai-startup-blue);
+}
+
+#cookiebar .cookiebar-category .form-check-input:disabled {
+	opacity: 0.6;
+}
+
+#cookiebar .cookiebar-category strong {
+	color: var(--white);
+	font-weight: 600;
+}
+
+#cookiebar .cookiebar-category p {
+	margin: 4px 0 0 30px;
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--color-text-1);
+}
+
+#cookiebar .cookiebar-settings .cookiebar-btn {
+	min-width: 200px;
+	margin-top: 6px;
+}
+
+.footer .copy-right .cookiebar-open {
+	margin-left: 6px;
+	color: var(--white);
+	text-decoration: underline;
+}
+
+.map-consent-placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 18px;
+	padding: 50px 20px;
+	text-align: center;
+	border: 1px dashed var(--color-border-2);
+	border-radius: var(--theme-radius);
+	background: var(--theme-surface);
+}
+
+.map-consent-placeholder p {
+	margin: 0;
+	color: var(--color-title);
+}
+
+@media (max-width: 991px) {
+	#cookiebar {
+		max-height: 90vh;
+		overflow-y: auto;
+	}
+
+	#cookiebar .cookiebar-actions {
+		margin-top: 16px;
+	}
+}
+
+@media (max-width: 575px) {
+	#cookiebar .cookiebar-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	#cookiebar .cookiebar-form,
+	#cookiebar .cookiebar-btn {
+		width: 100%;
+	}
+}
+
+/* Footer tagline */
+.footer .about-footer .title {
+	font-size: 22px;
+	line-height: 1.4;
+	margin-bottom: 24px;
+}
+
+/* Header: the template's compact bar holds four links; ours has five plus a longer button. */
+.header.style-2 .container.w-975 {
+	max-width: 1180px;
+}
+
+.box-nav-menu .item-link span,
+.header .tf-btn .text-btn {
+	white-space: nowrap;
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+	.header .logo .site-logo {
+		max-width: 170px;
+	}
+}
+
+/* CMS headings at reading size (the template's h2 is a section headline). */
+.rich-content h2 {
+	font-size: 28px;
+	line-height: 1.3;
+}
+
+.rich-content h3 {
+	font-size: 21px;
+	line-height: 1.35;
+}
+
+/* Bottom bar: links and the ANPC badges side by side, never on top of each other. */
+.footer .bottom-footer-content ul {
+	gap: 15px 20px;
+}
+
+.footer .bottom-footer-content ul li {
+	flex-shrink: 0;
+	white-space: nowrap;
+}
+
+.footer .anpc-logo {
+	width: 150px;
+}
+
+/* Phone inputs: room for intl-tel-input's flag and dial code. The theme sets input padding
+   with !important, which beats the inline padding the plugin computes. */
+.iti input[type="tel"],
+.iti input[type="text"] {
+	padding-left: 96px !important;
+}
+
+/* The theme resets list items; rich content keeps its bullets and numbers. */
+.rich-content ul > li {
+	list-style: disc;
+}
+
+.rich-content ol > li {
+	list-style: decimal;
+}
+
+.rich-content li {
+	margin-bottom: 6px;
+}

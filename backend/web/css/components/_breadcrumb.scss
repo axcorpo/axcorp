@@ -1,0 +1,14 @@
+// COMPONENTS / BREADCRUMB
+// ------------------------------------
+
+.page-breadcrumb {
+	& > li:not(:last-child):after {
+		content: '\f111';
+		font: normal 5px 'FontAwesome';
+		margin: 0 5px 0 7px;
+		position: relative;
+		top: -3px;
+		opacity: .4;
+		filter: alpha(opacity=40);
+	}
+}
