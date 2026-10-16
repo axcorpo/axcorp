@@ -191,10 +191,6 @@ return [
 					'route' => '/site/sitemap',
 				],
 				[
-					'pattern' => '/sitemap.xsl',
-					'route' => '/site/sitemap-xsl',
-				],
-				[
 					'pattern' => '<action:(invitation|logout|search|ipn|accept-cookies|assume-identity|newsletter)>',
 					'route' => '/site/<action>',
 				],

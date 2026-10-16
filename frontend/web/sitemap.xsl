@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-	Browser-only presentation for /sitemap (served by site/sitemap-xsl): browsers without a
+	Browser-only presentation for /sitemap (a static file next to index.php, so it loads
+	without any URL rule): browsers without a
 	native XML tree viewer (Chrome, Edge) would otherwise render the sitemap as a wall of
 	concatenated text. Crawlers ignore the xml-stylesheet processing instruction entirely.
 	Styled after the site's dark theme.

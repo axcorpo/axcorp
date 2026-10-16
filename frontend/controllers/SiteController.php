@@ -1089,26 +1089,12 @@ class SiteController extends MainController
 		// crawlers ignore the processing instruction.
 		return preg_replace(
 			'/^(<\?xml[^?]*\?>)/',
-			'$1' . "\n" . '<?xml-stylesheet type="text/xsl" href="' . Url::to(['/site/sitemap-xsl']) . '"?>',
+			'$1' . "\n" . '<?xml-stylesheet type="text/xsl" href="' . Url::to('@web/sitemap.xsl') . '"?>',
 			$xml,
 			1
 		);
 	}
 
-	/**
-	 * The XSLT stylesheet the sitemap references, rendering the urlset as a readable
-	 * page when the sitemap is opened in a browser.
-	 *
-	 * @return string
-	 */
-	public function actionSitemapXsl()
-	{
-		$response = Yii::$app->getResponse();
-		$response->format = Response::FORMAT_RAW;
-		$response->getHeaders()->set('Content-Type', 'text/xsl; charset=utf-8');
-
-		return file_get_contents($this->getViewPath() . DIRECTORY_SEPARATOR . 'sitemap.xsl');
-	}
 
 	/**
 	 * Site search action.
